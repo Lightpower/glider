@@ -8,7 +8,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body>    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= render 'layouts/site/user_info' %>
+
     <%= yield %>
+
+    <%= content_tag :footer, class: 'footer' do %>
+      © copyright, 2020
+    <% end %>
   </body>
 </html>

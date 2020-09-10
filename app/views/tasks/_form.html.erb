@@ -1,0 +1,38 @@
+<%= form_for @task, html: { class: 'main-panel' } do |f| %>
+  <% if @team&.errors&.any? %>
+    <div id='error_explanation'>
+      <b>Cannot save the task:</b>
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='field'>
+    <%= f.label :name, class: 'caption' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= f.label :category, class: 'caption' %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :description, class: 'caption' %>
+    <%= f.text_area :description, class: 'long' %>
+  </div>
+  <div class='field'>
+    <%= f.label :assigned_at, class: 'caption' %>
+    <%= f.datetime_field :assigned_at, class: 'datetime' %>
+  </div>
+  <div class='field'>
+    <%= f.label :priority, class: 'caption' %>
+    <%= f.number_field :priority, class: 'long' %>
+  </div>
+
+  <div class='actions button'>
+    <%= f.submit 'Сохранить', class: 'action_button' %>
+  </div>
+<% end %>
