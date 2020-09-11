@@ -1,13 +1,15 @@
 # encoding: UTF-8
 class TasksController < ApplicationController
-  PERMITTED_PARAMS = %i[user_id name description assigned_at priority state category category_id]
+  PERMITTED_PARAMS = %i[user_id name description assigned_at priority state category_name
+                        category_id]
 
   before_action :authenticate_user!
 
-  before_action :load_task, only: [:show, :edit, :update, :delete]
+  before_action :load_task, only: [:show, :edit, :update, :finish, :delete, :postpone]
   before_action :load_categories, only: [:show, :edit, :update, :delete]
 
   def index
+  	@tasks = Task.for(current_user).future(Date.today).active.ordered
   end
 
   def show
@@ -19,7 +21,7 @@ class TasksController < ApplicationController
 
   def create
     Task.create task_params
-    render 'index'
+    redirect_to '/'
   end
 
   def edit
@@ -27,21 +29,41 @@ class TasksController < ApplicationController
 
   def update
     @task.update task_params
+    redirect_to '/'
   end 
 
+  def total
+  	byebug
+  	@active_date = Task.first_active_date_for(current_user)
+  	if @active_date
+  	  @tasks = Task.for(current_user).by_date(@active_date).active.ordered
+  	else
+  	  redirect_to root_path
+  	end
+  end
+
+  # Ajax
   def finish
+    result = @task.finish
+    render text: result ? 'ok' : 'error'
   end
 
+  # Ajax
   def delete
+    result = @task.cancel
+    render text: result ? 'ok' : 'error'
   end
 
+  # Ajax
   def postpone
+    result = @task.postpone
+    render text: result ? 'ok' : 'error'
   end
 
   private 
 
   def load_task
-    @task = Task.find params[:task_id]
+    @task = Task.find params[:id]
   end
 
   def load_categories
@@ -49,11 +71,10 @@ class TasksController < ApplicationController
   end  
 
   def task_params
-  	byebug
   	task_hash = params.require(:task).merge!(user_id: current_user.id)
-    category = task_hash[:category]
-    if category
-      task_hash.merge!(category_id: handle_category_id(category)).delete(:category)
+    category_name = task_hash[:category_name]
+    if category_name
+      task_hash.merge!(category_id: handle_category_id(category_name)).delete(:category_name)
     end
     task_hash.permit(*PERMITTED_PARAMS)
   end

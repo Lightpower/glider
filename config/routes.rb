@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   	get :finish, on: :member
   	get :delete, on: :member
   	get :postpone, on: :member
+  	get :total, on: :collection
   end
 end

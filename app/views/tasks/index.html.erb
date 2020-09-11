@@ -1,1 +1,17 @@
-index
+<h1>All tasks</h1>
+<%= content_tag :div, class: 'main-panel' do %>
+  <%= content_tag :div, class: 'wrapper' do %>
+    <% @tasks.each do |task| %>
+      <%= content_tag :div, class: 'task' do %>
+        <%= content_tag :span, class: 'task_name' do %>
+          <%= link_to task.name, edit_task_path(task) %>
+        <% end %>
+        <%= content_tag :span, class: 'date' do %>
+          <%= task.assigned_at_date %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= link_to 'Add', new_task_path, class: 'button' %>
+  <%= link_to 'Daily tasks', root_path, class: 'button' %>
+<% end %>
