@@ -1,3 +1,27 @@
+.body{
+  height: 1080px;
+width: 100%;
+max-width: 1920px;
+
+}
+
+
+ .content {
+   height: 750px;
+   width: 100%;
+   max-width: 1920%;
+   display: flex;
+   justify-content: center;
+   background: rgba(196, 196, 196, 0.93);
+   margin-top: 400px;
+
+ }
+
+
+
+
+
+
 img.action {
   width: 24px;
   height: 24px;

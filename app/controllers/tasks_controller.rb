@@ -33,7 +33,7 @@ class TasksController < ApplicationController
   end 
 
   def total
-  	byebug
+    
   	@active_date = Task.first_active_date_for(current_user)
   	if @active_date
   	  @tasks = Task.for(current_user).by_date(@active_date).active.ordered
