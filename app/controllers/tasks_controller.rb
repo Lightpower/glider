@@ -21,7 +21,7 @@ class TasksController < ApplicationController
 
   def create
     Task.create task_params
-    redirect_to '/'
+    redirect_to root_path
   end
 
   def edit
@@ -29,11 +29,10 @@ class TasksController < ApplicationController
 
   def update
     @task.update task_params
-    redirect_to '/'
+    redirect_to root_path
   end 
 
   def total
-  	byebug
   	@active_date = Task.first_active_date_for(current_user)
   	if @active_date
   	  @tasks = Task.for(current_user).by_date(@active_date).active.ordered
@@ -52,7 +51,7 @@ class TasksController < ApplicationController
   def delete
     result = @task.cancel
     render text: result ? 'ok' : 'error'
-  end
+  end 
 
   # Ajax
   def postpone

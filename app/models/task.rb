@@ -40,6 +40,7 @@ class Task < ActiveRecord::Base
 
   def self.first_active_date_for(user)
     active_date = self.for(user).active.order(:assigned_at).first&.assigned_at
+    return nil if active_date.blank?
     active_date < Date.today ?  active_date : nil
   end
 end
