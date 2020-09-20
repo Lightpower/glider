@@ -1,26 +1,63 @@
-.body{
-  height: 1080px;
+body{
+height: 1080px;
 width: 100%;
 max-width: 1920px;
+background: url(norma.png) no-repeat center center fixed;
+background-size: cover;
+}
+
+.login-logo{
+  display: flex;
+  justify-content: center;
+  font-size: 72px;
 
 }
 
-
- .content {
-   height: 750px;
+  
+.loginpages{
+  height: 750px;
    width: 100%;
    max-width: 1920%;
    display: flex;
    justify-content: center;
-   background: rgba(196, 196, 196, 0.93);
-   margin-top: 400px;
+   
+   margin-left: 35px;
+   margin-right: 35px;
+}
+ .content {
+  display: flex;
+  justify-content: center;
+   
+}
 
- }
+.inside{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 200px;
+  
+}
+ 
+.one{
+font-size: 35px;
+}
+
+.two{
+  font-size: 35px;
+}
+
+.actions{
+background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
+border-radius: 22px;
+}
 
 
-
-
-
+.footer{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
+}
 
 img.action {
   width: 24px;
