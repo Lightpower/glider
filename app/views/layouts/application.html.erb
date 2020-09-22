@@ -8,16 +8,22 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= render 'layouts/site/user_info' %>
-
-    <%= yield %>
-
-    <%= content_tag :footer, class: 'footer' do %>
-      © copyright, 2020
-    <% end %>
+  <body> 
+    <div id="main">
+      <h3 class="login-logo">Task for the day</h3>
+      <div id="div11">   
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <%= render 'layouts/site/user_info' %>
+  
+      <div id="wrapper">
+        <%= yield %>
+      </div>  
+  
+      <footer class="footer">
+        © copyright, 2020
+      </footer> 
+    </div>   
   </body>
 </html>
