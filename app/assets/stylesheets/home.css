@@ -8,7 +8,7 @@ body {
 }
  
 #main { 
-  margin: 10% auto 15% auto;
+  margin: 15% auto 5% auto;
   background: rgba(196, 196, 196, 0.9) ;
   border-radius: 24px;
   width: 66%;
@@ -21,16 +21,16 @@ body {
 }
 
 #wrapper {
-  margin: auto auto 10% auto;
+  margin: auto auto 5% auto;
   
 }
 .content {
   display: flex;
   justify-content: center;
-   
+  padding: 0 0 150px 0;
 }
 
-.inside{
+.inside {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -38,33 +38,69 @@ body {
   
 }
  
-.one{
+.one {
 font-size: 35px;
 display: flex;
 justify-content: center;
 }
 
-.two{
-  font-size: 35px;
+.two {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
 }
 
 .singandlog {
-  display: inline-block;
+ display: flex;
+ justify-content: center;
+ max-width: 100%;
+
 }
+
+
+
+
 
 input[type=submit]{
-background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
-border-radius: 22px;
-}
-
-.singandlog a {
   background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
   border-radius: 22px;
   text-decoration: none;
+  font-size: 25px;
+  border: 1px solid black;
+  margin-left: 35px;
+  font-weight: 500;
+  
+}
+ 
+
+.singandlog a  {
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
+  border-radius: 22px;
+  text-decoration: none;
+  font-size: 25px;
+  border: 1px solid black;
+  font-weight:500;
+  
+   
 }
 
 .two a {
   text-decoration: none;
+  text-decoration-color: black;
+  text-decoration-line: none;
+}
+ 
+input:active {
+  -moz-text-decoration-color: none;
+}
+.a {
+  text-decoration: none;
+}
+.two a:hover {
+  color: black;
+
 }
 .input[type="email" i]{
   height: 15px;
@@ -81,12 +117,13 @@ border-radius: 22px;
   width: 250px;
 }
 
-user_remember_me {
-  font-size: 20px;
+#user_remember_me {
+  width: 25px;
+  height: 25px;
 }
-.fotter {
+.footer {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .Login{
@@ -141,3 +178,6 @@ img.action {
    display: flex;
    justify-content: right;
  }
+
+
+
