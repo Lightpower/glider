@@ -1,29 +1,26 @@
-<div class="loginpages">
-  <div class="content">
+<div class="content">
   <div class="inside">
-      <div class="one2">
-                       <div>
-                       <h3 class="forgotpas">Forgot your passwordd?</h3>
-                       </div>
-                       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-                       <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <div class="tasks_forg">
+      <h3 class="forgotpas">Forgot your passwordd?</h3>
+    </div>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-                      <div class="field">
-                      <%= f.label :email %><br />
-                      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                      </div>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    </div>
 
-                      <div class="actions">
-                      <%= f.submit "Send me reset password instructions" %>
-                      </div>
-                     <% end %>
-                     <%- if controller_name != 'sessions' %>
+    <div class="actions_forgot">
+      <%= f.submit "Send me reset password instructions" %>
+    </div>
+    <% end %>
+    <%- if controller_name != 'sessions' %>
                     
-                     <div class="Login">
-                     <%= link_to "Log in", new_session_path(resource_name) %><br />
-                     <% end %>
-       </div>    
-     </div>
-   </div>
+    <div class="Login">
+      <%= link_to "Log in", new_session_path(resource_name) %><br />
+    <% end %>
+                     
+  </div>    
 </div>
 <%= render "devise/shared/links" %>
