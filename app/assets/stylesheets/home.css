@@ -8,16 +8,23 @@ body {
 }
  
 #main { 
-  margin: 15% auto 5% auto;
+  margin: 5% auto 5% auto;
   background: rgba(196, 196, 196, 0.9) ;
   border-radius: 24px;
   width: 66%;
+  height: 27em;
 }
 
 .login-logo {
   display: flex;
   justify-content: center;
   font-size: 50px;
+}
+
+#div11 {
+  
+  display: flex;
+  justify-content: center;
 }
 
 #wrapper {
@@ -27,19 +34,24 @@ body {
 .content {
   display: flex;
   justify-content: center;
-  padding: 0 0 150px 0;
+  
 }
 
 .inside {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 15%;
   
+  
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
 }
  
 .one {
-font-size: 35px;
+
 display: flex;
 justify-content: center;
 }
@@ -56,7 +68,7 @@ justify-content: center;
  display: flex;
  justify-content: center;
  max-width: 100%;
-
+margin-top: 1em;
 }
 
 
@@ -67,10 +79,11 @@ input[type=submit]{
   background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
   border-radius: 22px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.2em;
+  font-weight: 500;
   border: 1px solid black;
   margin-left: 35px;
-  font-weight: 500;
+  font-style: normal;
   
   
 }
@@ -80,11 +93,13 @@ input[type=submit]{
   background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
   border-radius: 22px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.28em;
   border: 1px solid black;
   font-weight:500;
-  
-   
+  color: black;
+  margin-right: 3em;
+  padding: 1px 6px;
+
 }
 
 .two a {
@@ -119,14 +134,13 @@ input:active {
 }
 
 #user_remember_me {
-  width: 25px;
-  height: 25px;
-}
-.footer {
-  display: flex;
-  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
 }
 
+.field_rem {
+  font-size: 1.5em;
+}
 
 
 
@@ -241,5 +255,12 @@ img.action {
 }
 
 #new_user .actions {
-  padding-left: 15%
+  margin:auto;
 }
+
+.actions_taskf {
+  padding-top: 1px;
+}
+
+
+
