@@ -1,31 +1,33 @@
 <div class="content">
   <div class="inside">
-    <h2 class="task_sign">Sign up </h2>
-
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+     <div class="one>"
+          <div >
+           <h2 class="task_sign">Sign up </h2>
+          </div>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
   
-    <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
-    </div>
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+          </div>
   
-    <div class="field">
-      <%= f.text_field :full_name, placeholder: 'Name'  %>
-    </div>
+          <div class="field">
+           <%= f.text_field :full_name, placeholder: 'Name'  %>
+          </div>
   
-    <div class="field">
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password(6 characters minimum)' %>
-    </div>
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password(6 characters minimum)' %>
+          </div>
   
-    <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation' %>
-    </div>
+          <div class="field">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password confirmation' %>
+          </div>
   
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-    <% end %>
-   
+          <div class="actions_newp">
+            <%= f.submit "Sign up" %>
+          </div>
+          <% end %>
+       </div>
   </div>
 
 </div>
