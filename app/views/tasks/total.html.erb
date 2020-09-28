@@ -1,6 +1,5 @@
 
-<div class="main-panel-content">
-<div class="main-panel-content-one">
+
 <h1 >Close the day - <%= @active_date.strftime('%d.%m') %></h1>
 <%= content_tag :div, class: 'main-panel' do %>
   <span class='info'>Please mark the finished tasks and postpone the unfinished ones to the next date.</span>
@@ -26,5 +25,4 @@
   <% end %>
   <%= link_to 'OK', root_path, class: 'button' %>
 <% end %>
-</div>
-</div>
+
