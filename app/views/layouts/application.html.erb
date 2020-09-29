@@ -11,9 +11,8 @@
   <body> 
     <div id="main">
       <h3 class="login-logo">Task for the day</h3>
-      <div id="div11">   
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+      <div id="div11">
+        <%= render 'layouts/site/flash_message' %>
       </div>
       <%= render 'layouts/site/user_info' %>
   
