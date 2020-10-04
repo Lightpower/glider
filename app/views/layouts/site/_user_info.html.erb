@@ -1,6 +1,7 @@
 <% if current_user %>
   <%= content_tag :div, class: 'user_info' do %>
     Hello, <%= link_to current_user.full_name, edit_user_registration_path, class: 'user-data' %> 
-    <%= link_to 'Logout', destroy_user_session_path, class: 'action' %> 
+      <%= link_to 'Logout', destroy_user_session_path, class: 'action' %> 
+    
   <% end %>
 <% end %>

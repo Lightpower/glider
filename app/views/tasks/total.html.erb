@@ -1,28 +1,32 @@
 
-
-<h1 >Close the day - <%= @active_date.strftime('%d.%m') %></h1>
+ <div class="close-theday">
+ <h1 >Close the day - <%= @active_date.strftime('%d.%m') %></h1>
+ </div>
 <%= content_tag :div, class: 'main-panel' do %>
   <span class='info'>Please mark the finished tasks and postpone the unfinished ones to the next date.</span>
-  <%= content_tag :div, class: 'wrapper' do %>
-    <div class="nametask"
+<%= content_tag :div, class: 'wrapper' do %>
+  <div class="table-letter"> 
+    <div class="nametask">
       <% @tasks.each do |task| %>
       <%= content_tag :div, class: 'task' do %>
       <%= content_tag :span, task.name, class: 'task_name'%>
     </div>
-      <div class="imgfunctione">
-        <%=  link_to finish_task_path(task) do %>
-          <%= image_tag 'finish-task.png', class: 'action' %>
+    
+    <div class="imgfunctione">
+      <%=  link_to finish_task_path(task) do %>
+        <%= image_tag 'finish-task.png', class: 'action' %>
         <% end %>
         <%=  link_to postpone_task_path(task) do %>
-          <%= image_tag 'postpone-task.png', class: 'action' %>
+        <%= image_tag 'postpone-task.png', class: 'action' %>
         <% end %>
         <%=  link_to delete_task_path(task) do %>
-          <%= image_tag 'delete-task.png', class: 'action' %>
+        <%= image_tag 'delete-task.png', class: 'action' %>
         <% end %>
-      </div>  
-      <% end %>
+    </div> 
+  </div>   
+<% end %>
     <% end %>
   <% end %>
-  <%= link_to 'OK', root_path, class: 'button' %>
+  <%= link_to 'OK', root_path, class: 'button-ok' %>
 <% end %>
 

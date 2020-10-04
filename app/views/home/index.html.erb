@@ -1,4 +1,4 @@
-<h1>Task for the day</h1>
+
 <%= content_tag :div, class: 'main-panel' do %>
   <%= content_tag :div, class: 'wrapper' do %>
     <% @tasks.each do |task| %>
@@ -6,18 +6,22 @@
         <%=  link_to edit_task_path(task) do %>
           <%= content_tag :span, task.name, class: 'task_name' %>
         <% end %>
+      
         <%=  link_to finish_task_path(task) do %>
-          <%= image_tag 'finish-task.png', class: 'action' %>
+          <%= image_tag 'finish-task.png', class: 'action-done' %>
         <% end %>
         <%=  link_to edit_task_path(task) do %>
-          <%= image_tag 'edit-task.png', class: 'action' %>
+          <%= image_tag 'edit-task.png', class: 'action-d2' %>
         <% end %>
         <%=  link_to delete_task_path(task) do %>
-          <%= image_tag 'delete-task.png', class: 'action' %>
+          <%= image_tag 'delete-task.png', class: 'action-d3' %>
         <% end %>
+        
       <% end %>
     <% end %>
   <% end %>
-  <%= link_to 'Add', new_task_path, class: 'button' %>
-  <%= link_to 'List', tasks_path, class: 'button' %>
+  <div class="link-al">
+    <%= link_to 'Add', new_task_path, class: 'button-one' %>
+    <%= link_to 'List', tasks_path, class: 'button-two' %>
+  </div>
 <% end %>
