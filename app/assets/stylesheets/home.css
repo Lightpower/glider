@@ -254,7 +254,10 @@ img.action {
 .user_info {
   padding-left: 1.5em;
 }
-
+.user_info a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
 .user-data {
   text-decoration: none;
   background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
@@ -306,13 +309,16 @@ a.action {
  justify-content: center;
 }
 
-
+.button-one {
+  padding-left: 3em;
+}
 
 
 
 .link-al {
   padding-left: 45%;
   padding-top: 5%;
+  padding-bottom: 2%;
   
 }
 
@@ -322,21 +328,29 @@ a.action {
   border-radius: 22px;
   font-size: 1.2em;
   border: 1px solid black;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   
 }
 
 .action-done {
-  width: 24px;
-  height: 24px;
-  padding-left: 80%;
+  width: 1.75em;
+  height: 1.75em;
+  padding-left: 70%;
+  margin-right: 0.7em;
 }
 
 .action-d2{
-  width: 24px;
-  height: 24px;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 0.7em;
+  text-decoration: none;
 }
 
 .action-d3{
-  width: 24px;
-  height: 24px;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 0.7em;
+  text-decoration: none;
 }
+
