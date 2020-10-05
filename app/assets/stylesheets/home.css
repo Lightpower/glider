@@ -354,3 +354,37 @@ a.action {
   text-decoration: none;
 }
 
+#wrapper h2 {
+  display: flex;
+  justify-content: center;
+}
+
+
+#user_current_password {
+  height: 25px;
+  width: 250px;
+}
+
+#edit_user .actions {
+  display: flex;
+  justify-content: center;
+}
+
+.cancle {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.unhappy {
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper .button_to {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-left: 37em;
+}
+
