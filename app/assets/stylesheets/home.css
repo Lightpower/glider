@@ -368,12 +368,14 @@ a.action {
 #edit_user .actions {
   display: flex;
   justify-content: center;
+  padding-right: 1.5em;
 }
 
 .cancle {
   display: flex;
   justify-content: center;
   margin-top: 2em;
+  padding-right: 2em;
 }
 
 .unhappy {
@@ -388,3 +390,93 @@ a.action {
   margin-left: 37em;
 }
 
+.link_back {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+  padding-left: 0.7em;
+}
+
+.link_back a {
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
+  border-radius: 22px;
+  font-size: 1.2em;
+  border: 1px solid black;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.add_newt {
+  display: flex;
+  justify-content: center;
+}
+
+.add_field-menu .long {
+
+  height: 25px;
+  width: 170px;
+}
+
+.add_field-menu .field .caption {
+  opacity: 0;
+}
+
+.add_field-menu .field .datetime {
+  margin-right: 5.6em;
+  height: 25px;
+  width: 170px;
+}
+
+.add_field-menu .field .caption_1{
+  padding-top: 0.2em;
+}
+
+.add_field-menu .field .field-caption {
+  margin-right: 3.6em;
+}
+
+.add_field-menu .actions-button {
+  padding-bottom: 2em;
+  
+}
+
+.add_field-menu .action_button {
+  margin-left: 20em;
+  
+}
+.all-task {
+  display: flex;
+  justify-content: center;
+}
+
+.button_addtask {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+  
+}
+
+.button_addtask .button-one  {
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
+  border-radius: 22px;
+  font-size: 1.2em;
+  border: 1px solid black;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.button_addtask .button-one {
+  margin-right: 0.3em;
+}
+
+.button_addtask .button-two  {
+  text-decoration: none;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0.18) 0%, #A8F98B 100%);
+  border-radius: 22px;
+  font-size: 1.2em;
+  border: 1px solid black;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}

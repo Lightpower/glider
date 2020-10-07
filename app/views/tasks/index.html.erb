@@ -1,4 +1,6 @@
-<h1>All tasks</h1>
+<div class="all-task">
+  <h1>All tasks</h1>
+</div>  
 <div class="main-panel-content">
 <%= content_tag :div, class: 'main-panel' do %>
   <%= content_tag :div, class: 'wrapper' do %>
@@ -13,7 +15,9 @@
       <% end %>
     <% end %>
   <% end %>
-  <%= link_to 'Add', new_task_path, class: 'button' %>
-  <%= link_to 'Daily tasks', root_path, class: 'button' %>
+  <div class="button_addtask">
+    <%= link_to 'Add', new_task_path, class: 'button-one' %>
+    <%= link_to 'Daily tasks', root_path, class: 'button-two' %>
+  </div>
 <% end %>
 </div>

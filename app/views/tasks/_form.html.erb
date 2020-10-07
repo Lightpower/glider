@@ -9,30 +9,30 @@
       </ul>
     </div>
   <% end %>
+ <div class="add_field-menu">
+    <div class='field'>
+      <%= f.text_field :name, placeholder: 'Name' %>
+    </div>
+    <div class='field'>
+      <%= f.text_field :category_name, placeholder: 'Category' %>
+    </div>
 
-  <div class='field'>
-    <%= f.label :name, class: 'caption' %>
-    <%= f.text_field :name %>
-  </div>
-  <div class='field'>
-    <%= f.label :category_name, 'Category', class: 'caption' %>
-    <%= f.text_field :category_name %>
-  </div>
+    <div class='field'>
+      <%= f.text_area :description, class: 'long', placeholder: 'Description' %>
+    </div>
+    <div class='field'>
+      <%= f.label :assigned_at, class: 'caption' %>
+      <%= f.datetime_field :assigned_at, class: 'datetime' %>
+    </div>
+    <div class='field'>
+      <div class='field-caption'>
+        <%= f.label :priority, class: 'caption_1' %>
+        <%= f.number_field :priority, class: 'long' %>
+      </div>  
+    </div>
 
-  <div class='field'>
-    <%= f.label :description, class: 'caption' %>
-    <%= f.text_area :description, class: 'long' %>
-  </div>
-  <div class='field'>
-    <%= f.label :assigned_at, class: 'caption' %>
-    <%= f.datetime_field :assigned_at, class: 'datetime' %>
-  </div>
-  <div class='field'>
-    <%= f.label :priority, class: 'caption' %>
-    <%= f.number_field :priority, class: 'long' %>
-  </div>
-
-  <div class='actions button'>
-    <%= f.submit 'Сохранить', class: 'action_button' %>
-  </div>
+    <div class='actions-button'>
+      <%= f.submit 'Сохранить', class: 'action_button' %>
+    </div>
+  </div>  
 <% end %>
