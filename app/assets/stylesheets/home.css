@@ -21,6 +21,11 @@ body {
   font-size: 2.5em;
 }
 
+.login-logo .h3 {
+  font-style: normal;
+
+}
+
 #div11 {
   
   display: flex;
@@ -139,7 +144,8 @@ input:active {
 }
 
 .field_rem {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-style: normal;
 }
 
 
@@ -194,11 +200,11 @@ img.action {
  .task {
    padding-top: 4em;
    padding-left: 4em;
-   text-decoration: none;
+   
    
  }
 
- 
+
  .imgfunctione{
    padding-left: 25em;
    text-decoration: none;
@@ -344,14 +350,18 @@ a.action {
   width: 1.75em;
   height: 1.75em;
   margin-right: 0.7em;
-  text-decoration: none;
+  
 }
 
 .action-d3{
   width: 1.75em;
   height: 1.75em;
   margin-right: 0.7em;
-  text-decoration: none;
+  
+}
+
+a:-webkit-any-link {
+ text-decoration: none;
 }
 
 #wrapper h2 {
